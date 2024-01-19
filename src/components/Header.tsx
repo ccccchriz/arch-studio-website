@@ -64,13 +64,19 @@ export default function Header({ isExpanded, setIsExpanded }: HeaderProps) {
           className={`bg-neutral-200 list-none px-12 py-10 text-3xl grid gap-4 ml-8 w-[calc(100%-2rem)]`}
         >
           <li>
-            <a href="">Portfolio</a>
+            <a href="" className="block">
+              Portfolio
+            </a>
           </li>
           <li>
-            <a href="">About Us</a>
+            <a href="" className="block">
+              About Us
+            </a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="" className="block">
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
