@@ -7,6 +7,7 @@ interface HeaderProps {
 
 export default function Header({ isExpanded, setIsExpanded }: HeaderProps) {
   const menuButton = useRef<HTMLButtonElement>(null);
+  const nav = useRef<HTMLElement>(null);
 
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key == "Escape") {
@@ -15,11 +16,20 @@ export default function Header({ isExpanded, setIsExpanded }: HeaderProps) {
     }
   };
 
+  const handleClick = (event: MouseEvent) => {
+    if (event.target == nav.current) {
+      setIsExpanded(false);
+      menuButton.current!.focus();
+    }
+  };
+
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("click", handleClick);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("click", handleClick);
     };
   });
 
@@ -45,9 +55,10 @@ export default function Header({ isExpanded, setIsExpanded }: HeaderProps) {
         )}
       </button>
       <nav
+        ref={nav}
         className={`${
           isExpanded ? "absolute" : "hidden"
-        }  top-24 left-0 w-full h-full bg-neutral-600 backdrop-opacity-50`}
+        }  top-24 left-0 w-full h-full bg-neutral-600 bg-opacity-50`}
       >
         <ul
           className={`bg-neutral-200 list-none px-12 py-10 text-3xl grid gap-4 ml-8 w-[calc(100%-2rem)]`}
