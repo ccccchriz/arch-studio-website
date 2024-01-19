@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("/fonts/subset-LeagueSpartan-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("/fonts/subset-LeagueSpartan-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
