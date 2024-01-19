@@ -34,7 +34,7 @@ export default function Carousel() {
           <li></li>
         ))}
       </ul> */}
-      <div className="grid desktop:hidden bg-[url(/images/home/mobile/image-hero-paramour.jpg)] bg-neutral-600 bg-opacity-60 bg-blend-overlay bg-cover px-8 py-28 text-neutral-100">
+      <div className="min-h-[35rem] grid place-content-center desktop:hidden bg-[url(/images/home/mobile/image-hero-paramour.jpg)] bg-neutral-600 bg-opacity-60 bg-blend-overlay bg-cover px-8 text-neutral-100">
         <h3 className="mb-3 font-bold text-5xl">Project Paramour</h3>
         <p className="mb-20 text-lg">
           Project made for an art museum near Southwest London. Project Paramour
