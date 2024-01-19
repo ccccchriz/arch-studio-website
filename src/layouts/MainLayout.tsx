@@ -21,7 +21,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <>
       <Header isExpanded={isExpanded} setIsExpanded={setIsExpanded}></Header>
-      <main ref={main}>{children}</main>
+      <main ref={main} className="font-primary">
+        {children}
+      </main>
     </>
   );
 }

@@ -1,7 +1,7 @@
-import MainLayout from "./layouts/MainLayout";
+import Home from "./Pages/Home";
 
 function App() {
-  return <MainLayout>dfas</MainLayout>;
+  return <Home />;
 }
 
 export default App;
