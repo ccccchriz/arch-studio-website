@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useEffect, useRef, useState } from "react";
 
@@ -20,10 +21,11 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
   return (
     <>
-      <Header isExpanded={isExpanded} setIsExpanded={setIsExpanded}></Header>
+      <Header isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
       <main ref={main} className="font-primary">
         {children}
       </main>
+      <Footer />
     </>
   );
 }
