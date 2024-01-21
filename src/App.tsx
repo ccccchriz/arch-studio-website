@@ -1,7 +1,7 @@
-import Portfolio from "./Pages/Portfolio";
+import About from "./Pages/About";
 
 function App() {
-  return <Portfolio />;
+  return <About />;
 }
 
 export default App;
