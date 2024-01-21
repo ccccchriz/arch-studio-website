@@ -1,3 +1,4 @@
+import { ScrollRestoration } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useEffect, useRef, useState } from "react";
@@ -25,6 +26,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
       <main ref={main} className="font-primary">
         {children}
       </main>
+      <ScrollRestoration />
       <Footer />
     </>
   );
