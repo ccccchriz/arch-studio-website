@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import MainLayout from "../layouts/MainLayout";
 
@@ -44,9 +45,8 @@ export default function Home() {
       </div>
       <div className="min-h-[35rem] grid content-center gap-6 p-8 text-neutral-100 font-bold bg-[url(/images/home/mobile/image-small-team.jpg)] bg-cover bg-neutral-600 bg-opacity-60 bg-blend-overlay">
         <h2 className="text-5xl ">Small team, big ideas</h2>
-        <a
-          href=""
-          type="button"
+        <Link
+          to={"/about"}
           className="flex bg-neutral-600 text-lg px-8 py-6 justify-self-start items-center gap-6"
         >
           About Us
@@ -55,7 +55,7 @@ export default function Home() {
             alt=""
             className="filter brightness-0 invert w-6 h-5"
           />
-        </a>
+        </Link>
       </div>
       <div className="px-8 grid gap-6 mt-16">
         <h2 className="text-neutral-600 text-5xl font-bold mb-4">Featured</h2>
@@ -66,15 +66,14 @@ export default function Home() {
               className={`min-h-60 p-6 grid content-end ${el.image} bg-neutral-600 bg-opacity-60 bg-blend-overlay`}
             >
               <h3 className="text-4xl font-bold">{el.title}</h3>
-              <a href="" className="text-lg">
+              <Link to={"/portfolio"} className="text-lg">
                 View All Projects
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <a
-          href=""
-          type="button"
+        <Link
+          to={"/portfolio"}
           className="flex bg-neutral-600 text-lg px-8 py-6 text-neutral-100 justify-center items-center gap-6"
         >
           See All
@@ -83,7 +82,7 @@ export default function Home() {
             alt=""
             className="filter brightness-0 invert w-6 h-5"
           />
-        </a>
+        </Link>
       </div>
     </MainLayout>
   );

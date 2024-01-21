@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="grid gap-8 place-items-center bg-neutral-300 mt-36 pb-12">
@@ -6,18 +8,17 @@ export default function Footer() {
       </div>
       <ul className="grid gap-8 place-items-center text-lg text-neutral-500 font-bold">
         <li>
-          <a href="">Portfolio</a>
+          <Link to={"/portfolio"}>Portfolio</Link>
         </li>
         <li>
-          <a href="">About Us</a>
+          <Link to={"/about"}>About Us</Link>
         </li>
         <li>
-          <a href="">Contact</a>
+          <Link to={"/contact"}>Contact</Link>
         </li>
       </ul>
-      <a
-        href=""
-        type="button"
+      <Link
+        to={"/portfolio"}
         className="flex bg-neutral-600 text-lg px-8 py-6 text-neutral-100 font-bold justify-center items-center gap-6"
       >
         See Our Portfolio
@@ -26,7 +27,7 @@ export default function Footer() {
           alt=""
           className="filter brightness-0 invert w-6 h-5"
         />
-      </a>
+      </Link>
     </footer>
   );
 }

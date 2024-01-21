@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   isExpanded: boolean;
@@ -35,13 +36,14 @@ export default function Header({ isExpanded, setIsExpanded }: HeaderProps) {
 
   return (
     <header className="flex justify-between items-center p-8 font-primary font-bold text-neutral-600 tablet:text-neutral-400 tablet:gap-20 desktop:gap-28">
-      <a href="">
+      <Link to={"/"}>
         <img
           src="/images/logo.svg"
           alt="Arch logo - home"
           className="max-w-[4.8125rem]"
         />
-      </a>
+      </Link>
+
       <button
         onClick={() => setIsExpanded((value: boolean) => !value)}
         type="button"
@@ -65,19 +67,19 @@ export default function Header({ isExpanded, setIsExpanded }: HeaderProps) {
           className={`flex flex-col bg-neutral-200 list-none px-12 py-10 text-3xl gap-4 ml-8 w-[calc(100%-2rem)] tablet:w-auto tablet:p-0 tablet:bg-neutral-100 tablet:flex-row tablet:text-lg tablet:gap-16`}
         >
           <li>
-            <a href="" className="block">
+            <Link to={"/portfolio"} className="block">
               Portfolio
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="block">
+            <Link to={"/about"} className="block">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="block">
+            <Link to={"/contact"} className="block">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
