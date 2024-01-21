@@ -1,8 +1,12 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+const Footer = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <footer className="grid gap-8 place-items-center bg-neutral-300 mt-36 pb-12">
+    <footer
+      className="grid gap-8 place-items-center bg-neutral-300 mt-36 pb-12"
+      ref={ref}
+    >
       <div className="size-[7.5rem] bg-neutral-600 -mt-[3.75rem] grid place-items-center">
         <img src="/images/logo.svg" alt="" className="filter invert max-w-14" />
       </div>
@@ -30,4 +34,6 @@ export default function Footer() {
       </Link>
     </footer>
   );
-}
+});
+
+export default Footer;

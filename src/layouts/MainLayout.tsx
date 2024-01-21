@@ -11,12 +11,15 @@ export default function MainLayout({ children }: MainLayoutProps) {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const main = useRef<HTMLElement>(null);
+  const footer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isExpanded) {
       main.current!.setAttribute("inert", "");
+      footer.current?.setAttribute("inert", "");
     } else {
       main.current!.removeAttribute("inert");
+      footer.current?.removeAttribute("inert");
     }
   }, [isExpanded]);
 
@@ -27,7 +30,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         {children}
       </main>
       <ScrollRestoration />
-      <Footer />
+      <Footer ref={footer} />
     </>
   );
 }
