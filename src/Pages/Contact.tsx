@@ -61,6 +61,7 @@ export default function Contact() {
             </li>
           </ul>
         </div>
+        <img src="/images/contact/mobile/image-map.png" alt="" />
         <form action="" noValidate className="grid gap-4">
           <label htmlFor="name" className="sr-only">
             Name
