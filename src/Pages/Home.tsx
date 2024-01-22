@@ -63,7 +63,7 @@ export default function Home() {
           {featured.map((el, index) => (
             <li
               key={index}
-              className={`min-h-60 p-6 grid content-end ${el.image} bg-neutral-600 bg-opacity-60 bg-blend-overlay`}
+              className={`min-h-60 p-6 grid content-end ${el.image} bg-cover bg-neutral-600 bg-opacity-60 bg-blend-overlay`}
             >
               <h3 className="text-4xl font-bold">{el.title}</h3>
               <Link to={"/portfolio"} className="text-lg">
