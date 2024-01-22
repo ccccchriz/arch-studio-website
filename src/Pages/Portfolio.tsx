@@ -79,7 +79,7 @@ export default function Portfolio() {
   return (
     <MainLayout>
       <h2 className="sr-only">Our Projects</h2>
-      <ul className="grid gap-6 p-8 desktop:grid-cols-3 desktop:max-w-[70rem]">
+      <ul className="grid gap-6 p-8 desktop:grid-cols-3 desktop:max-w-[70rem] desktop:px-0">
         {projects.map((el, index) => (
           <li
             key={index}
