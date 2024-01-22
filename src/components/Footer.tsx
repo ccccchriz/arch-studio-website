@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = forwardRef<HTMLElement>((_, ref) => {
   return (
     <footer
-      className="grid gap-8 place-items-center bg-neutral-300 mt-36 pb-12"
+      className="grid gap-8 place-items-center bg-neutral-300 mt-36 pb-12 desktop:max-w-[70rem] desktop:mx-auto"
       ref={ref}
     >
       <div className="size-[7.5rem] bg-neutral-600 -mt-[3.75rem] grid place-items-center">
