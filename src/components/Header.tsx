@@ -35,7 +35,7 @@ export default function Header({ isExpanded, setIsExpanded }: HeaderProps) {
   });
 
   return (
-    <header className="flex justify-between items-center p-8 font-primary font-bold text-neutral-600 tablet:text-neutral-400 tablet:gap-20 desktop:gap-28">
+    <header className="flex justify-between items-center p-8 font-primary font-bold text-neutral-600 tablet:text-neutral-400 tablet:gap-20 desktop:gap-28 desktop:max-w-[70rem] mx-auto">
       <Link to={"/"}>
         <img
           src="/images/logo.svg"
