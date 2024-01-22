@@ -26,7 +26,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <>
       <Header isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
-      <main ref={main} className="font-primary flex justify-center">
+      <main ref={main} className="font-primary flex flex-col justify-center">
         {children}
       </main>
       <ScrollRestoration />
